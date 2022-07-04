@@ -36,7 +36,9 @@ const print = @import("std").debug.print;
 pub fn main() void {
     var myframe = async getPageTitle("http://example.com");
 
-    var value = ???
+    print("Waiting...\n", .{});
+
+    var value = await myframe;
 
     print("{s}\n", .{value});
 }
@@ -44,5 +46,6 @@ pub fn main() void {
 fn getPageTitle(url: []const u8) []const u8 {
     // Please PRETEND this is actually making a network request.
     _ = url;
+    print("Did it.\n", .{});
     return "Example Title.";
 }
