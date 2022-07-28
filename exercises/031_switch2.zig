@@ -34,7 +34,7 @@ pub fn main() void {
             else => '!',
         };
 
-        std.debug.print("{}", .{real_char});
+        std.debug.print("{c}", .{real_char});
         // Note: "{c}" forces print() to display the value as a character.
         // Can you guess what happens if you remove the "c"? Try it!
     }
